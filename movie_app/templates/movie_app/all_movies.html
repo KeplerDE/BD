@@ -8,7 +8,7 @@
     <h2> Список всеъ фильмов </h2>
     <ul>
         {% for movie in movies %}
-            <li> {{ movie }}</li>
+            <li><a href="{{ movie.get_url}}">{{ movie }}</a></li>
         {% endfor %}
     </ul>
 
