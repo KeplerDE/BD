@@ -5,11 +5,17 @@
 {% block title %} Все фильмы {% endblock %}
 
 {% block content %}
-    <h2> Список всеъ фильмов </h2>
+    <h2> Список всеx фильмов </h2>
     <ul>
         {% for movie in movies %}
-            <li><a href="{{ movie.get_url }}">{{ movie }}</a></li>
+            <li><a href="{{ movie.get_url }}">{{ movie }}</a>,
+                rating - {{ movie.rating }},
+                year - {{ movie.year|default:"Неизвестен"}},
+                budget - {{ movie.budget }},
+            </li>
         {% endfor %}
     </ul>
+
+
 
 {% endblock %}
